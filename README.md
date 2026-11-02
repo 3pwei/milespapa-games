@@ -11,14 +11,14 @@ site/                 ← Cloudflare Pages 只發布這個資料夾
   _redirects          ← 網域根目錄導向 https://milespapa.com/projects
   404.html            ← 找不到頁面時顯示
   tarot/              ← 塔羅工坊（來源：3pwei/tarot-atelier）
-  election/           ← 拜託，投我！（待加入）
+  election/           ← 拜託，投我！（來源：既有 Sites 專案，第 62 版）
 scripts/check-site.mjs ← 發布前檢查
 ```
 
 | 遊戲 | 網址 | 原始碼 | 建置方式 |
 | --- | --- | --- | --- |
 | 塔羅工坊 | `/tarot/` | `3pwei/tarot-atelier` | `NEXT_PUBLIC_BASE_PATH=/tarot pnpm check`，取 `out/` |
-| 拜託，投我！ | `/election/` | 待補 | 待補 |
+| 拜託，投我！ | `/election/` | 既有 Sites 專案，第 62 版（`3077429`） | 原生 HTML / CSS / JS；驗證後取 `dist/election/` |
 
 ## 更新一個遊戲
 
@@ -50,3 +50,11 @@ PR 標題建議寫明來源版本，例如 `deploy: tarot 2de8de7`，方便追�
 ## 回復
 
 在 Cloudflare Pages 的 Deployments 頁面，對前一個成功的發布選擇 Rollback；或在這個 repo revert 該次合併。
+
+## 選舉遊戲來源與存檔
+
+本次匯入既有 Sites 專案 `appgprj_6ada556cc1f481919d953f80b08e1a85` 的最新原始碼快照，對應第 62 版；來源 commit 為 `3077429cc10af7efdb0a6bea092711dbf1564f21`，靜態資源版本為 `6e30c8afaa98d621`。來源測試與開發紀錄目前保留於既有 Sites 專案。
+
+這款遊戲直接以原生 HTML、CSS、JavaScript 執行，不需要框架編譯。後續同步時，在來源專案依序執行 `node scripts/stamp-assets.cjs`、`node scripts/check-routes.cjs` 與 `node --test`，再用 `dist/election/` 完整取代本 repo 的 `site/election/`，執行本站檢查並開 PR。
+
+遊戲維持 `qingchuan-rpg-v6` 存檔 key 與 version 6 格式；同一 hostname 的既有瀏覽器存檔可繼續讀取。不同 hostname 的 localStorage 不會自動遷移。
