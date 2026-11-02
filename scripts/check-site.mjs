@@ -50,7 +50,9 @@ for (const entry of readdirSync(SITE, { withFileTypes: true })) {
   try {
     html = readFileSync(index, "utf8");
   } catch {
-    errors.push(`${entry.name}/ has no index.html.`);
+    errors.push(
+      `${entry.name}/ has no index.html. Each folder under site/ must be one game; do not nest games inside category folders (see AGENTS.md).`,
+    );
     continue;
   }
   // A game built without its sub-path loads assets from the site root and breaks.
