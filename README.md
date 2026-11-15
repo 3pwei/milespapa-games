@@ -45,6 +45,7 @@ PR 標題建議寫明來源版本，例如 `deploy: tarot 2de8de7`，方便追�
 - Build output directory：`site`
 - Production branch：`main`
 - 自訂網域：`games.milespapa.com`
+- 塔羅 AI 解讀（Production 環境）：Workers AI 綁定 `AI`、D1 綁定 `USAGE_DB`、加密變數 `VISITOR_SALT`。改了設定要重新部署才會生效；細節見 `3pwei/tarot-atelier` 的 `docs/deployment.md`。
 
 **注意**：切換到這個 repo 之前，`site/` 必須包含目前線上所有的遊戲（包括 `election/`）。Cloudflare 每次發布都會以 `site/` 的內容**完整取代**網站，少放的遊戲會從線上消失。
 
