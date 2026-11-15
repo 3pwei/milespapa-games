@@ -12,12 +12,13 @@ site/                 ← Cloudflare Pages 只發布這個資料夾
   404.html            ← 找不到頁面時顯示
   tarot/              ← 塔羅工坊（來源：3pwei/tarot-atelier）
   election/           ← 拜託，投我！（來源：既有 Sites 專案，第 62 版）
+functions/tarot/      ← 塔羅 AI 解讀端點（Cloudflare Pages Function）
 scripts/check-site.mjs ← 發布前檢查
 ```
 
 | 遊戲 | 網址 | 原始碼 | 建置方式 |
 | --- | --- | --- | --- |
-| 塔羅工坊 | `/tarot/` | `3pwei/tarot-atelier` | `NEXT_PUBLIC_BASE_PATH=/tarot pnpm check`，取 `out/` |
+| 塔羅工坊 | `/tarot/` | `3pwei/tarot-atelier` | 在來源 repo 執行 `pnpm release:stage ../milespapa-games`（取代 `site/tarot/` 與 `functions/tarot/`） |
 | 拜託，投我！ | `/election/` | 既有 Sites 專案，第 62 版（`3077429`） | 原生 HTML / CSS / JS；驗證後取 `dist/election/` |
 
 ## 更新一個遊戲
