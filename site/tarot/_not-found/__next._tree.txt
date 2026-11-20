@@ -1,4 +1,4 @@
 :HL["/tarot/_next/static/chunks/0utgfosqahv3g.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"lZK3e4VWUC4y3SF3q-R3U","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"HD6cjrVSVY0ped9ZKPRjV","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
