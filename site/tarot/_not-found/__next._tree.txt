@@ -1,4 +1,4 @@
-:HL["/tarot/_next/static/chunks/1v50jshs40ri_.css","style"]
+:HL["/tarot/_next/static/chunks/2im_chqnpqlp7.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"2MBauAH8WdPbV0_q1GrF6","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"z6lQnB_NFqM5wr3Fz6VJ6","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
